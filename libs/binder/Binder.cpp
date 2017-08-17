@@ -240,6 +240,8 @@ status_t BBinder::onTransact(
             if (resultReceiver != NULL) {
                 resultReceiver->send(INVALID_OPERATION);
             }
+
+            return NO_ERROR;
         }
 
         case SYSPROPS_TRANSACTION: {
